@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script restores the original /etc/hosts file from backup
+
+if [ -f /etc/hosts.bak ]; then
+  sudo cp /etc/hosts.bak /etc/hosts
+  echo "/etc/hosts has been restored from backup."
+else
+  echo "Backup file /etc/hosts.bak not found. Nothing to restore."
+fi
